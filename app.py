@@ -2,13 +2,14 @@ from flask import Flask, render_template
 from flask import request, redirect, url_for
 from mysql import connector 
 
-app = Flask(__name__)
+app = Flask(_name_)
 
 db = connector.connect (
-    host    = 'localhost', 
-    user    = 'root',
-    passwd  = '',
-    database= 'db_kuliah'
+   host = 'qdg0e.h.filess.io', 
+    user    = 'dbcihuy_slightlyme',
+    port    = '3305',
+    password= 'fee38a27a3e288e8f75d0df8571abe3b7478a6b9',
+    database= 'dbcihuy_slightlyme' 
 )
 
 if db.is_connected():
@@ -75,5 +76,5 @@ def hapus_data(nim):
         db.rollback()
         return f"Error: {str(e)}"
     
-if __name__ == '__main__':
+if _name_ == '_main_':
     app.run()
